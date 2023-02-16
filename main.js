@@ -1,13 +1,19 @@
-let delka = 'ahoj'.length // počet znaku
-let velka = 'Nějaky muj delši text'.toUpperCase() // všechna velká písmena
-let malá = 'MARETI'.toLowerCase() // všechna malá písmena
-let mezery = 'nejaky muj text'.trim() // odstraní mezery
-let kus = 'nejaky muj text'.slice(0,6) // vypiš rozmezí textu od 0-6
+let title = 'Pán Prstenů'
+title.length
+title.toUpperCase
+title.slice(0,5)
+title.slice(title.length -5, title.length)
 
-let text1 = 'nejaky muj text cz'.indexOf('cz') // vypíše na kterém místě je umístěno cz = 16.misto
+let email = prompt('Zadej svůj email')
+let atIndex = email.indexOf('@')
 
-let text2 = '20'.padStart(4,'0') // o počet míst posunuta doprava a vyplněna 0
-let text3 = '20'.padEnd(4,'0') //	zbylý počet míst vyplní 0
+let emailParts = {
+	jmeno : email.slice(0,atIndex),
+	 domena : email.slice(atIndex+1)
+	
+}
 
+document.body.innerHTML = '<p> Jmeno a Příjmení: '+emailParts.jmeno+'</p>'
+document.body.innerHTML += '<p> Název domény: ' +emailParts.domena + '</p>'
 
 
